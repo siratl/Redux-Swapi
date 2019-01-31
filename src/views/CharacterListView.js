@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Loader from 'react-loader-spinner';
 import { CharacterList } from '../components';
+import sabre from '../img/sabre.png';
 // import actions
 import { getChars } from '../actions';
 
@@ -22,9 +23,15 @@ class CharacterListView extends React.Component {
     }
     return (
       <div className="CharactersList_wrapper">
-        <h1>StarWars Characters</h1>
-      
-        <CharacterList characters={this.props.characters} />
+        <div className="titleContainer">
+          <img className="sabreImg" src={sabre} />
+
+          <h1>StarWars Characters</h1>
+          <img className="sabreImg" src={sabre} />
+        </div>
+        <div className='characterContainer'>
+          <CharacterList characters={this.props.characters} />
+        </div>
       </div>
     );
   }
