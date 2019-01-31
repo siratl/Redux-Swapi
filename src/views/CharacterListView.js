@@ -24,12 +24,21 @@ class CharacterListView extends React.Component {
     return (
       <div className="CharactersList_wrapper">
         <div className="titleContainer">
-          <img className="sabreImg" src={sabre} />
+          <img alt="" className="sabreImg" src={sabre} />
 
           <h1>StarWars Characters</h1>
-          <img className="sabreImg" src={sabre} />
+          <img alt="" className="sabreImg" src={sabre} />
         </div>
-        <div className='characterContainer'>
+
+        <div className="characterContainer">
+          {this.props.characters.length === 0 && (
+            <Loader
+              type="Bars"
+              color="rgb(48, 108, 238)"
+              height="90"
+              width="60"
+            />
+          )}
           <CharacterList characters={this.props.characters} />
         </div>
       </div>

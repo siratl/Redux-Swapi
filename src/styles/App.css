@@ -6,7 +6,7 @@
 .charCard {
   width: 90%;
   min-width: 500px;
-  margin: 50px auto;
+  margin: 0px auto 50px auto;
   padding: 1%;
   border-radius: 29px;
   box-shadow: 2px 2px 5px black;
@@ -86,7 +86,7 @@ h2:hover {
   font-size: 1.2em;
   border: 2px solid white;
   margin: 0 auto;
-  padding: 0 30px 0 0;
+  padding: 30px 30px 0 0;
   width: 40%;
   min-width: 500px;
   border-radius: 20px;
