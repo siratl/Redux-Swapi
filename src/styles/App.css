@@ -1,28 +1,94 @@
-.App {
+.app {
   text-align: center;
+  color: white
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.charCard {
+  width: 90%;
+  min-width: 500px;
+  margin: 50px auto;
+  padding: 1%;
+  border-radius: 29px;
+  box-shadow: 2px 2px 5px black;
+  text-shadow: 1px 1px 5px black;
+  
+  animation-name: out;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+@keyframes out {
+  0% {background-color: rgb(48, 108, 238); border-radius: 29px; box-shadow: 2px 2px 7px 1px rgb(0, 0, 0);}
+  100% {background-color:  rgb(48, 108, 238); border-radius: 6px;}
+  }
+
+.charCard:hover {
+  animation-name: in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+
+  box-shadow: 2px 2px 7px rgb(0, 0, 0);
+  cursor: pointer;
 }
 
-.App-title {
-  font-size: 1.5em;
+@keyframes in {
+  0% {background-color: rgb(48, 108, 238); border-radius: 6px;}
+  100% {background-color: rgb(8, 175, 22); border-radius: 29px;}
 }
 
-.App-intro {
-  font-size: large;
+p {
+  font-weight: 400;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.titleContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 200px;
+  margin: 20px 0 -30px 0;
 }
+
+.titleContainer .sabreImg {
+  width: 100px;
+  height: 100px;
+  margin: 20px 0 0 0;
+
+  animation: roll linear infinite;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes roll {
+  100% {transform: rotate(360deg)}
+ 
+}
+
+.titleContainer h1 {
+  text-shadow: 2px 2px 7px red;
+  font-size: 50px;
+  margin-left: 30px;
+  text-align: center;
+  border-bottom: 4px solid red;
+  padding: 0 0 10px 0px;
+}
+
+h2 {
+  transition: transform .2s;
+
+}
+
+h2:hover {
+  transform: scale(1.2);
+  text-shadow: 2px 2px 1px rgb(5, 70, 48);
+}
+
+.characterContainer {
+  font-size: 1.2em;
+  border: 2px solid white;
+  margin: 0 auto;
+  padding: 0 30px 0 0;
+  width: 40%;
+  min-width: 500px;
+  border-radius: 20px;
+}
+
